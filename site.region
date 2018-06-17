@@ -19,7 +19,7 @@
             {.end}
           </a>
         </h1>
-        
+
         {.section siteTagLine}
           <p>{@}</p>
         {.end}
@@ -40,6 +40,6 @@
     <script type="text/javascript" src="/scripts/site-bundle.js"></script>
 
     {squarespace-footers}
-    
+
   </body>
-</html> 
+</html>
