@@ -5,6 +5,8 @@
 //
 // http://github.com/squarespace/squarespace-core
 
+require('./styles/site.less');
+
 var core = require('@squarespace/core');
 
 window.addEventListener('DOMContentLoaded', function() {

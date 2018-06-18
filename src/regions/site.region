@@ -7,6 +7,7 @@
     {squarespace-headers}
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+    ZAP! ZAIP!
 
     <header>
       {.section website}
@@ -37,7 +38,7 @@
       <squarespace:block-field id="footer-blocks" columns="12" />
     </footer>
 
-    <script type="text/javascript" src="/scripts/site-bundle.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
 
     {squarespace-footers}
 

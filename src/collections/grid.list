@@ -6,6 +6,4 @@
       <li>{assetUrl}</li>
     </ul>
     {.end}
-    {.repeated section collections}
-    {.end}
 {.end}

@@ -1,42 +1,67 @@
-require('dotenv').config({silent: true});
+require('dotenv').config({silent: true})
 
-const webpack = require('webpack');
-const path = require('path');
-const pkg = require(__dirname + '/package.json');
+const path = require('path'),
+      webpack = require('webpack'),
+      CleanupPlugin = require('webpack-cleanup-plugin'),
+      ExtractTextPlugin = require('extract-text-webpack-plugin'),
+      CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+const package = path.resolve(__dirname, './'),
+      build = path.resolve(package, 'build'),
+      src = path.resolve(package, 'src')
 
-const siteJs = ['./scripts/site.js']
+const isProduction = process.env.NODE_ENV === 'production'
 
-const config = {
-  devtool: IS_PRODUCTION ? false : 'source-map',
-  entry: {
-    'scripts/site-bundle': siteJs
-  },
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: '[name].js'
-  },
-  plugins: [
-    new webpack.optimize.DedupePlugin(),
+const rules = [{
+    oneOf: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+            presets: [ '@babel/preset-env' ],
+        }
+    },{
+        test: /\.less$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+                { loader: 'css-loader',
+                  options: { sourceMap: !isProduction }},
+                { loader: 'less-loader',
+                  options: { sourceMap: !isProduction }},
+            ]
+        })
+    }]
+},{
+    exclude: [/\.jsx?$/, /\.css$/, /\.less$/, /\.html$/, /\.json$/],
+    loader: 'file-loader',
+    options: {
+        name: 'assets/[name].[hash:8].[ext]'
+    }
+}]
 
-    new webpack.optimize.OccurenceOrderPlugin(),
-
-    new webpack.DefinePlugin({
-      '__DEBUG__': JSON.stringify(!IS_PRODUCTION)
-    }),
-
-    new webpack.optimize.UglifyJsPlugin({
-      beautify: !IS_PRODUCTION,
-      compress: IS_PRODUCTION ? {
-        drop_console: true, // eslint-disable-line camelcase
-        warnings: false
-      } : false,
-      mangle: IS_PRODUCTION ? {
-          except: ['_'] // don't mangle lodash
-      } : false
-    })
-  ]
+module.exports = {
+    mode: isProduction ? 'production' : 'development',
+    devtool: isProduction ? false : 'source-map',
+    module: {rules},
+    entry: {
+        'scripts/app.js': path.resolve(src, 'index.js')
+    },
+    output: {
+        path: build,
+        filename: '[name]',
+    },
+    plugins: [
+        new CleanupPlugin([ build ]),
+        new ExtractTextPlugin({
+            filename: 'styles/app.css',
+            allChunks: true
+        }),
+        new CopyWebpackPlugin(
+            [ 'template.conf', 'blocks/**', 'collections/**',
+              'pages/**', { from: 'regions/**', flatten: true } ],
+            { context: src, copyUnmodified: true }
+        )
+    ]
 }
-
-module.exports = config;
