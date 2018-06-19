@@ -1,0 +1,9 @@
+{.section collection}
+    {.repeated section items}
+    <ul>
+      <li>{title}</li>
+      <li>{fullUrl}</li>
+      <li>{assetUrl}</li>
+    </ul>
+    {.end}
+{.end}
