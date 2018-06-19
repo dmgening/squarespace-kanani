@@ -1,5 +1,7 @@
 {.section collection}
     {.repeated section collections}
+        <section>
         {mainContent}
+        </section>
     {.end}
 {.end}

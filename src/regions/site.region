@@ -7,24 +7,15 @@
     {squarespace-headers}
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-    ZAP! ZAIP!
-
     <header>
       {.section website}
-        <h1>
-          <a href="/" data-content-field="site-title">
-            {.section logoImageUrl}
-             <img src="{logoImageUrl}?format=original" alt="{siteTitle}" />
-            {.or}
-              {siteTitle}
-            {.end}
-          </a>
-        </h1>
-
-        {.section siteTagLine}
-          <p>{@}</p>
+        {.section logoImageUrl}
+          <img class="brand" src="{logoImageUrl}?format=original" alt="{siteTitle}" />
+        {.or}
+          <h1 class="brand" data-content-field="site-title">
+            {siteTitle}
+          </h1>
         {.end}
-
       {.end}
 
       <squarespace:navigation navigationId="primary-nav" template="navigation" />

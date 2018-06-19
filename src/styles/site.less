@@ -1,3 +1,12 @@
+@import (css) url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900");
+@import (css) url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+
+@import "./typography.less";
+@import "./navigation.less";
+
+@spacing-xs: .5rem;
+@spacing-sm: 1rem;
+
 html, body {
   min-height: 100vh;
   margin: 0;
@@ -11,6 +20,7 @@ html {
 
 body {
   letter-spacing: 0;
+  font-family: @font-primary;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.8;

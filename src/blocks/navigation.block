@@ -1,36 +1,31 @@
-<nav data-content-field="navigation-primary-nav">
-  {.repeated section items}
-      {.folder?}
-        <a href="{collection.fullUrl}">{collection.navigationTitle}</a>
-
-        <span>
-          {.repeated section items}
-            {.collection?}
-                <a href="{collection.fullUrl}">
-                  {collection.navigationTitle}
-                </a>
-            {.end}
-            {.section externalLink}
-                <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                  {title}
-                </a>
-            {.end}
-          {.end}
-        </span>
-          
-      {.or}
-
+<nav class="site" data-content-field="navigation-primary-nav">
+    {.repeated section items}
+    <div class="item">
+        {.folder?}
+        {.var @folderType collection.typeLabel}
+        {.var @folderUrl collection.fullUrl}
+        <a href="{@folderUrl}">{collection.navigationTitle}</a>
+        <div class="dropdown">
+            <div class="inner">
+                {.repeated section items}
+                <div class="item">
+                    <a href="{.equal? @folderType "index"}{@folderUrl}#section-{collection.id}{.or}{collection.fullUrl}{.end}">
+                        {collection.navigationTitle}
+                    </a>
+                </div>
+                {.end}
+            </div>
+        </div>
+        {.or}
         {.section collection}
-          <a href="{fullUrl}">{navigationTitle}</a>
+        <a href="{fullUrl}">{navigationTitle}</a>
         {.end}
-
         {.section externalLink}
-          <a href="{url}"{.section newWindow} target="_blank"{.end}>
+        <a href="{url}"{.section newWindow} target="_blank"{.end}>
             {title}
-          </a>
+        </a>
         {.end}
-
-      {.end}
-      
-  {.end}
+        {.end}
+    </div>
+    {.end}
 </nav>
