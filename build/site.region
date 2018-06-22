@@ -8,6 +8,7 @@
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
     <header>
+      ZAP
       {.section website}
         {.section logoImageUrl}
           <img class="brand" src="{logoImageUrl}?format=original" alt="{siteTitle}" />
