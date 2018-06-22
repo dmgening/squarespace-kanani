@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900);@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);h1,
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900);@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,400);h1,
 h2,
 h3,
 h4,
@@ -34,6 +34,7 @@ a {
 header {
   text-align: center;
   padding: 1rem;
+  background: var(--white);
 }
 header .brand {
   line-height: 0;
@@ -95,6 +96,32 @@ nav.site:hover .item a {
 nav.site:hover .item:hover a {
   color: #f5a45e;
 }
+section.landing-hero {
+  min-height: 50vh;
+  padding: 6rem 1.5rem;
+  background: url('/assets/landing-hero-bg.jpg');
+  background-blend-mode: screen;
+  background-size: 350px;
+}
+section.landing-catch {
+  padding: 6rem 1.5rem;
+  background: var(--dark-pink);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  filter: drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.25));
+}
+section.landing-catch h1 {
+  font-size: 2.5vw;
+  font-family: 'Comfortaa';
+  font-weight: 300;
+  text-align: center;
+  color: var(--white);
+  margin: 0;
+}
+section.landing-about {
+  padding: 6rem 1.5rem;
+}
 :root {
   --white: #ffffff;
   --outter-space: #424b54;
@@ -103,6 +130,9 @@ nav.site:hover .item:hover a {
   --dark-turquoise: #25ced1;
   --dark-pink: #ea526f;
   --mellow-apricot: #f6b276;
+}
+:root {
+  --content-width: 80rem;
 }
 html,
 body {
@@ -120,4 +150,11 @@ body {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.8;
+  background: var(--silver-pink);
 }
+main {
+  background: var(--white);
+  padding: 6rem 0;
+}
+
+/*# sourceMappingURL=app.css.map*/

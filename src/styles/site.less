@@ -1,11 +1,18 @@
 @import (css) url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900");
 @import (css) url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import (css) url("https://fonts.googleapis.com/css?family=Comfortaa:300,400");
 
 @import "./typography.less";
 @import "./navigation.less";
+@import "./landing.less";
+@import "./layout.less";
 
 @spacing-xs: .5rem;
 @spacing-sm: 1rem;
+@spacing-md: 1.5rem;
+@spacing-lg: 3rem;
+@spacing-xl: 6rem;
+
 
 :root {
   --white: #ffffff;
@@ -15,6 +22,10 @@
   --dark-turquoise: #25ced1;
   --dark-pink: #ea526f;
   --mellow-apricot: #f6b276;
+}
+
+:root {
+  --content-width: 80rem;
 }
 
 html, body {
@@ -34,4 +45,12 @@ body {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.8;
+
+  background: var(--silver-pink);
+}
+
+main {
+  background: var(--white);
+
+  padding: @spacing-xl 0;
 }

@@ -60,7 +60,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin(
             [ 'template.conf', 'blocks/**', 'collections/**',
-              'pages/**', { from: 'regions/**', flatten: true } ],
+              'pages/**', 'assets/**',
+              { from: 'regions/**', flatten: true }],
             { context: src, copyUnmodified: true }
         )
     ]

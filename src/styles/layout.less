@@ -1,0 +1,12 @@
+.grid() {
+  --grid-column-width: 11.0rem;
+
+  display: grid;
+  grid-column: full;
+  grid-template-columns: [full-start]
+                         minmax(1em, auto)
+                         [content-start]
+                         repeat(8, [col] minmax(0, var(--grid-column-width)))
+                         [content-end]
+                         minmax(1em, auto) [full-end];
+}
