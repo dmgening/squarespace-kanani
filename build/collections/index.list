@@ -1,7 +1,0 @@
-{.section collection}
-    {.repeated section collections}
-        <section class="section">
-        {mainContent}
-        </section>
-    {.end}
-{.end}
