@@ -1,6 +1,6 @@
 {.section collection}
     {.repeated section collections}
-        <section>
+        <section class="section">
         {mainContent}
         </section>
     {.end}
