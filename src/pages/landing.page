@@ -1,0 +1,85 @@
+<section id="landing-featured" class="section-block featured-media window-height tm-slider-parallax-container">
+    <div class="scroll-down">
+        <a href="#about" class="scroll-link">Scroll Down</a>
+    </div>
+		<div class="tm-slider-container full-width-slider"
+         data-parallax data-external-padding="60"
+         data-animation="slide" data-scale-under="960"
+    >
+				<ul class="tms-slides">
+						<li class="tms-slide" data-image data-force-fit>
+								<div class="tms-content">
+									  <div class="tms-content-inner center">
+										    <div class="row">
+											      <div class="column width-12">
+												        <h1 class="tms-caption title-large color-charcoal lspacing-medium"
+													          data-animate-in="preset:scaleOut;duration:1000ms;"
+												        >
+                                    Beauty, Power, Freedom
+												        </h1>
+												        <div class="clear"></div>
+												        <h3 class="tms-caption font-alt-1 color-charocal lspacing-xlarge"
+													          data-animate-in="preset:slideInUpShort;duration:1000ms;delay:200ms;"
+												        >
+													          From Italy to London
+												        </h3>
+											      </div>
+										    </div>
+									  </div>
+								</div>
+								<img data-src="/assets/landing-featured.jpg" data-retina src="images/blank.png" alt=""/>
+						</li>
+				</ul>
+    </div>
+</section>
+
+<section id="about" class="section-block bkg-wild-sand">
+		<div class="row">
+				<div class="column width-8 offset-2 center horizon"
+             data-animate-in="preset:slideInUpShort;duration:1000ms;" data-threshold="0.5"
+        >
+						<p class="lead text-xlarge weight-bold color-charcoal">
+                Made in Italy
+            </p>
+						<p class="lead text-medium weight-bold color-charcoal">
+                Behnaz has worked with some of Italy’s most brilliant artisans over the years.
+                These relationships allow her vision and designs to materialise into beautifully crafted shoes.
+            </p>
+						<a href="/about"
+               class="button medium bkg-black bkg-hover-dark-pink color-white
+                     color-hover-white mb-30 text-line-vertical fade-location"
+            >
+                Learn more
+            </a>
+				</div>
+		</div>
+</section>
+
+<section id="landing-products" class="section-block hero-3 bottom">
+    <div class="row">
+		    <div class="column width-5">
+		        <div class="hero-content">
+				        <div class="hero-content-inner color-light-charcoal">
+				            <!-- <h2>Take a look at our featured items</h2> -->
+                    <p class="lead">Our artisans share our passion for the perfection we demand</p>
+                    <h1>Our featured products</h1>
+				        </div>
+			      </div>
+		    </div>
+	  </div>
+</section>
+
+<section id="landing-products-list" class="section-block bkg-white">
+    <div class="row">
+        <div class="column width-12">
+            <div class="product-grid">
+                <squarespace:query collection="collections" limit="5">
+                    {@|apply product-related.block}
+                </squarespace:query>
+                <div class="grid-item">
+						        <a href="/collections" class="button large fade-location">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
