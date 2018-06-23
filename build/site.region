@@ -6,16 +6,26 @@
     {squarespace-headers}
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-    <header>
-      <squarespace:navigation navigationId="primary-nav" template="navigation" />
-    </header>
-    <main data-content-field="main-content">
-      {squarespace.main-content}
-    </main>
-    <footer>
-      <squarespace:block-field id="footer-blocks" columns="12" />
-    </footer>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    {squarespace-footers}
+	  <div class="wrapper reveal-side-navigation">
+		  <div class="wrapper-inner">
+			  <header class="header header-fixed header-fixed-on-mobile header-transparent"
+                data-bkg-threshold="100" data-compact-threshold="100">
+				  <div class="header-inner">
+            <squarespace:navigation navigationId="primary-nav" template="navigation" />
+          </div>
+        </header>
+        <main class="clearfix content" data-content-field="main-content">
+				  <div class="scroll-to-top">
+					  <a href="#">Back Up Top</a>
+				  </div>
+          {squarespace.main-content}
+        </main>
+        <footer>
+          <squarespace:block-field id="footer-blocks" columns="12" />
+        </footer>
+        <script type="text/javascript" src="/scripts/app.js"></script>
+        {squarespace-footers}
+      </div>
+    </div>
   </body>
 </html>
