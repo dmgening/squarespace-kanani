@@ -1,0 +1,81 @@
+<section class="section-block intro-title-3 bkg-wild-sand color-charcoal">
+    <div class="row">
+        <div class="column width-12 flex-justify-center">
+						<div class="title-container">
+								<div class="title-container-inner center">
+									  <h1 class="title-large horizon" data-animate-in="preset:slideInRightShort;duration:1000ms;">
+                        {item.title}
+									  </h1>
+								</div>
+						</div>
+        </div>
+    </div>
+</section>
+
+<script>console.log({@|json});</script>
+
+<section id="product-main" class="section-block bkg-white no-padding">
+    <div class="row small">
+        <div class="column width-6 breadcrumbs">
+
+            <div class="row">
+                <div class="column width-12 breadcrumbs">
+                    <a href="{collection.fullUrl}">{collection.title}</a> /
+                    {.repeated section item.categories}<a href="{collection.fullUrl}?filter={@}">{@}</a> / {.end}
+                    {item.title}
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="column width-12 breadcrumbs">
+                    <div class="tm-slider-container">
+                        <ul class="tms-slides">
+                            {.repeated section item.items}
+                            <li class="tms-slide" id="tm-slide-{id}">
+                                <img src="{assetUrl}" />
+                            </li>
+                            {.end}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="column width-6 price">
+
+            <div class="row">
+                <div class="column width-12 breadcrumbs">
+                    {item.excerpt}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column width-12 breadcrumbs">
+
+                    {item|product-price}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row large">
+        <div class="column width-12">
+            {item.body}
+        </div>
+    </div>
+</section>
+
+<section id="product-footer" class="section-block bkg-white no-padding-top">
+    <div class="row">
+        <div class="column width-12">
+            <hr />
+            <div class="row grid content-grid-4 product-grid">
+                <squarespace:query collection="{collection.urlId}" limit="4"
+                                   category="{.section item.categories}{@}{.end}">
+                    {@|apply product-related.block}
+                </squarespace:query>
+            </div>
+        </div>
+    </div>
+</section>

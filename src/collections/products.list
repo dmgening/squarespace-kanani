@@ -1,0 +1,43 @@
+{@|apply feature.block}
+
+{.section collection}
+<section class="section-block grid-filter-menu bkg-dark-turquoise color-white">
+    <div class="row">
+        <div class="column width-12">
+            <ul>
+                <li><a class="active" href="#" data-filter="*">All</a></li>
+                {.repeated section categories}
+                <li><a href="#" data-filter=".filter-{@}">{@}</a></li>
+                {.end}
+            </ul>
+        </div>
+    </div>
+</section>
+{.end}
+
+
+<section class="section-block grid-container bkg-white no-padding-top" data-layout-mode="fitRows" data-animate-resize
+         data-animate-filter-duration="700" data-animate-resize-duration="700">
+    <div class="row">
+        <div class="column width-12">
+            <div class="row grid content-grid-4 main-product-grid">
+                {.repeated section items}
+                <div class="grid-item
+                            {.section featured}large{.end}
+                            {.repeated section categories}filter-{@}{.end}">
+                    <div class="thumbnail">
+                        <a href="{fullUrl}">
+                            <img src="{assetUrl}" alt="{title" />
+                        </a>
+                    </div>
+                    <div class="item-description">
+                        <a href="{fullUrl}">
+                            <h4 class="project-title">{title}</h4>
+                        </a>
+                    </div>
+                </div>
+                {.end}
+            </div>
+        </div>
+    </div>
+</section>

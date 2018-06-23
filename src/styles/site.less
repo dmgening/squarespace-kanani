@@ -4,7 +4,9 @@
 
 @import "./theme.less";
 @import "./colors.less";
+
 @import "./landing.less";
+@import "./products.less";
 
 .header .logo {
   width: 12rem;
@@ -13,6 +15,52 @@
 .footer-top {
   background: var(--outter-space);
 }
+
+.flex-justify-center {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.grid-filter-menu a {
+  color: var(--white);
+  &.active {
+    color: 000;
+  }
+}
+
+.row.wide {
+  max-width: 160rem;
+}
+
+.section-small {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+// .grid-container .scale-grid .grid-item {
+//   width: 50%;
+//   &.large { width: 100%; }
+
+//   @media only screen and (min-width: 768px){
+//     width: 33.33333%;
+//     &.large { width: 66.66666%; }
+//   }
+//   @media only screen and (min-width: 960px){
+//     width: 25%;
+//     &.large { width: 50%; }
+//   }
+//   @media only screen and (min-width: 1280px){
+//     width: 20%;
+//     &.large { width: 40%; }
+//   }
+//   @media only screen and (min-width: 1540px){
+//     width: 16.66667%;
+//     &.large { width: 33.33334%; }
+//   }
+// }
+
+
 
 // .logo {
 //   .header & {

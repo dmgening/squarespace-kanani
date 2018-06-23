@@ -73,23 +73,11 @@
     <div class="row">
         <div class="column width-12">
             <div class="product-grid">
-                <squarespace:query collection="products" limit="5">
-                    {.repeated section items}
-                    <script>console.log({@|json.pretty});</script>
-                    <div class="grid-item">
-                        <div class="thumbnail no-margin-bottom">
-                            <img src="{assetUrl}" alt="{title}" />
-                            <div class="overlay">
-                                <a href="{fullUrl}" class="button large fade-location">
-                                    {title}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {.end}
+                <squarespace:query collection="collections" limit="5">
+                    {@|apply product-related.block}
                 </squarespace:query>
                 <div class="grid-item">
-						        <a href="/about" class="button large fade-location">View More</a>
+						        <a href="/collections" class="button large fade-location">View More</a>
                 </div>
             </div>
         </div>

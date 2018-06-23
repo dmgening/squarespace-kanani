@@ -21,13 +21,6 @@
 					  <a href="#">Back Up Top</a>
 				  </div>
 
-          <section class="section-block">
-            <div class="row">
-              <div class="column width-12">
-              </div>
-            </div>
-          </section>
-
           {.equal? collection.typeName "page"}
           {@|apply pagewrap.block}
           {.or}

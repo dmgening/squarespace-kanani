@@ -1,0 +1,7 @@
+<section class="section-block intro-title-4 bkg-wild-sand color-charcoal">
+    <div class="row">
+        <div class="column width-12 flex-justify-center">
+            <squarespace:block-field id="{.collection.urlId}_feature" columns="12" label="Page feature" />
+        </div>
+    </div>
+</section>
