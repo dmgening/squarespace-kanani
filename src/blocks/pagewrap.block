@@ -1,0 +1,16 @@
+<section class="section-block intro-title-1 bkg-mocasine color-white">
+    <div class="row">
+        <div class="column width-12">
+            <squarespace:block-field id="{id}_feature" columns="12" label="Page feature" />
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="row">
+        <div class="column width-12">
+            {squarespace.main-content}
+            <script>console.log({@|json.pretty})</script>
+        </div>
+    </div>
+</section>

@@ -3,6 +3,12 @@
 
         <div class="logo">
             <div class="logo-inner">
+                {.section website}
+                {.section logoImageUrl}
+                <a href="/"><img class="brand" src="{logoImageUrl}?format=original" alt="{siteTitle}" /></a>
+                <a href="/"><img class="brand" src="{logoImageUrl}?format=original" alt="{siteTitle}" /></a>
+                {.end}
+                {.end}
             </div>
         </div>
 

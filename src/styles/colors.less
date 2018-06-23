@@ -1,0 +1,32 @@
+.register(@name; @color){
+  .color-@{name},
+  .color-hover-@{name}:hover {
+    color: @color;
+  }
+
+  .bkg-@{name},
+  .bkg-hover-@{name}:hover {
+    background: @color;
+    border-color: @color;
+  }
+
+  .border-@{name},
+  .border-@{name}:hover {
+    border-color: @color;
+  }
+
+  :root {
+    --@{name}: @color;
+  }
+}
+
+.register(outter-space, #424b54);
+.register(silver-pink, #c5baaf);
+.register(mocasine, #fceade);
+.register(dark-turquoise, #25ced1);
+.register(dark-pink, #ea526f);
+.register(mellow-apricot, #f6b276);
+.register(wild-sand, #f6f5f3);
+
+.register(charcoal, #232323);
+.register(white, #ffffff);

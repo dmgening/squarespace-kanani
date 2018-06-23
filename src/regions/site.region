@@ -8,21 +8,38 @@
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 	  <div class="wrapper reveal-side-navigation">
 		  <div class="wrapper-inner">
+
 			  <header class="header header-fixed header-fixed-on-mobile header-transparent"
                 data-bkg-threshold="100" data-compact-threshold="100">
 				  <div class="header-inner">
             <squarespace:navigation navigationId="primary-nav" template="navigation" />
           </div>
         </header>
+
         <main class="clearfix content " data-content-field="main-content">
 				  <div class="scroll-to-top">
 					  <a href="#">Back Up Top</a>
 				  </div>
+
+          <section class="section-block">
+            <div class="row">
+              <div class="column width-12">
+              </div>
+            </div>
+          </section>
+
+          {.equal? collection.typeName "page"}
+          {@|apply pagewrap.block}
+          {.or}
           {squarespace.main-content}
+          {.end}
+
         </main>
-        <footer>
-          <squarespace:block-field id="footer-blocks" columns="12" />
+
+        <footer class="footer">
+          {@|apply footer.block}
         </footer>
+
       </div>
     </div>
     <script

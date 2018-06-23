@@ -50,6 +50,7 @@ module.exports = {
     },
     output: {
         path: build,
+        publicPath: '/',
         filename: '[name]',
     },
     plugins: [
