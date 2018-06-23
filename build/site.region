@@ -14,7 +14,7 @@
             <squarespace:navigation navigationId="primary-nav" template="navigation" />
           </div>
         </header>
-        <main class="clearfix content" data-content-field="main-content">
+        <main class="clearfix content " data-content-field="main-content">
 				  <div class="scroll-to-top">
 					  <a href="#">Back Up Top</a>
 				  </div>
