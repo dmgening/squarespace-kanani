@@ -23,9 +23,14 @@
         <footer>
           <squarespace:block-field id="footer-blocks" columns="12" />
         </footer>
-        <script type="text/javascript" src="/scripts/app.js"></script>
-        {squarespace-footers}
       </div>
     </div>
+    <script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/core.min.js"></script>
+    {squarespace-footers}
   </body>
 </html>

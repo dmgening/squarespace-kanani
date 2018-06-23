@@ -6,7 +6,6 @@
 // http://github.com/squarespace/squarespace-core
 
 require('./styles/site.less');
-require('./timber.js');
 
 var core = require('@squarespace/core');
 

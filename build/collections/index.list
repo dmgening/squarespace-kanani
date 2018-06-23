@@ -1,7 +1,0 @@
-{.section collection}
-{.repeated section collections}
-<div id="{urlId}" class="section-block">
-    {mainContent}
-</div>
-{.end}
-{.end}

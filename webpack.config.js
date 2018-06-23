@@ -53,18 +53,21 @@ module.exports = {
         filename: '[name]',
     },
     plugins: [
-        new CleanupPlugin([ build ]),
+        // new CleanupPlugin([ build ]),
         new ExtractTextPlugin({
             filename: 'styles/app.css',
             allChunks: true
         }),
         new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            $: 'jquery'
         }),
         new CopyWebpackPlugin(
             [ 'template.conf', 'blocks/**', 'collections/**',
               'pages/**',
+              { from: 'vendor/styles/*', to: path.resolve(build, 'styles'), flatten: true},
+              { from: 'vendor/assets/*', to: path.resolve(build, 'assets'), flatten: true},
+              { from: 'vendor/scripts/*', to: path.resolve(build, 'scripts'), flatten: true},
               { from: 'regions/**', flatten: true }],
             { context: src, copyUnmodified: true }
         )

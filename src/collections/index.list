@@ -1,7 +1,11 @@
 {.section collection}
 {.repeated section collections}
-<div id="{urlId}" class="section-block">
-    {mainContent}
-</div>
+<section id="{urlId}" class="section-block">
+    <div class="row">
+        <div class="column">
+            {mainContent}
+        </div>
+    </div>
+</section>
 {.end}
 {.end}
