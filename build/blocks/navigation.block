@@ -1,40 +1,41 @@
-{.section website}
-  {.section logoImageUrl}
-    <img class="brand" src="{logoImageUrl}?format=original" alt="{siteTitle}" />
-  {.or}
-    <h1 class="brand" data-content-field="site-title">
-      {siteTitle}
-    </h1>
-  {.end}
-{.end}
-<nav class="site" data-content-field="navigation-primary-nav">
-    {.repeated section items}
-    <div class="item">
-        {.folder?}
-        {.var @folderType collection.typeLabel}
-        {.var @folderUrl collection.fullUrl}
-        <a href="{@folderUrl}">{collection.navigationTitle}</a>
-        <div class="dropdown">
-            <div class="inner">
-                {.repeated section items}
-                <div class="item">
-                    <a href="{.equal? @folderType "index"}{@folderUrl}#section-{collection.id}{.or}{collection.fullUrl}{.end}">
-                        {collection.navigationTitle}
-                    </a>
-                </div>
-                {.end}
+<div class="row collapse full-width nav-bar reveal-side-navigation">
+    <div class="column width-12 nav-bar-inner">
+
+        <div class="logo">
+            <div class="logo-inner">
             </div>
         </div>
-        {.or}
-        {.section collection}
-        <a href="{fullUrl}">{navigationTitle}</a>
-        {.end}
-        {.section externalLink}
-        <a href="{url}"{.section newWindow} target="_blank"{.end}>
-            {title}
-        </a>
-        {.end}
-        {.end}
+
+				<nav class="navigation nav-block secondary-navigation nav-right">
+						<ul>
+								<li class="aux-navigation hide">
+										<a href="#" class="navigation-show overlay-nav-show nav-icon">
+											  <span class="icon-menu"></span>
+										</a>
+								</li>
+						</ul>
+				</nav>
+
+				<nav class="navigation nav-block primary-navigation nav-right"
+             data-content-field="navigation-primary-nav">
+            <ul>
+                {.repeated section items}
+                <li>
+										<a href="{collection.fullUrl}">{collection.navigationTitle}</a>
+                    {.folder?}
+                    {.var @parent collection}
+										<ul class="sub-menu">
+                        {.repeated section items}
+                        <li>
+										        <a href="{collection.fullUrl}">{collection.navigationTitle}</a>
+                        </li>
+                        {.end}
+                    </ul>
+                    {.end}
+                </li>
+                {.end}
+            </ul>
+        </nav>
+
     </div>
-    {.end}
-</nav>
+</div>

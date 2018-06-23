@@ -18,7 +18,7 @@ const rules = [{
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-            presets: [ '@babel/preset-env' ],
+            presets: [ ['@babel/preset-env', {loose: true}] ],
         }
     },{
         test: /\.less$/,
@@ -58,9 +58,13 @@ module.exports = {
             filename: 'styles/app.css',
             allChunks: true
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         new CopyWebpackPlugin(
             [ 'template.conf', 'blocks/**', 'collections/**',
-              'pages/**', 'assets/**',
+              'pages/**',
               { from: 'regions/**', flatten: true }],
             { context: src, copyUnmodified: true }
         )
