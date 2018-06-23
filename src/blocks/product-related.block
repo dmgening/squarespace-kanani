@@ -1,6 +1,10 @@
+{.var @delay 1000}
 {.repeated section items}
 <div class="grid-item">
-    <div class="thumbnail">
+    <div class="thumbnail horizon"
+         data-animate-in="preset:slideInUpShort;duration:1000ms;delay:{@delay}ms;"
+         data-threshold="1"
+    >
         <img src="{assetUrl}" alt="{title}" />
         <div class="overlay">
             <a href="{fullUrl}" class="button large fade-location">{title}</a>

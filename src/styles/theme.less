@@ -821,82 +821,120 @@ body,
 [5. Header Logo]
 */
 
-/* Initial Logo Width */
-.header .logo{
-	width: auto;
-}
-.header .logo a:first-child{
-	width: 12rem;
-}
-.header .logo a:last-child{
-	opacity: 0;
-	width: 4.4rem;
-	visibility: hidden;
+.header .logo {
+  position: relative;
+  width: 27rem;
 }
 
 /* Compacted Header Logo Width */
 .header-compact .logo{
-	width: 12rem;
+	width: 20rem;
 }
 
-/* Initial Logo Styling */
-.header .logo a{
-	padding: 0 1.4rem;
-	line-height: 4.4rem;
-	display: block !important;
-	float: left;
-}
-.header-in .logo a,
-.header-out .logo a{
-	-webkit-transition-duration: 0ms;
-	transition-duration: 0ms;
-}
-.header .logo a:first-child{
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
+.header .logo a {
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  display: block !important;
+  transition: opacity 0.5s, transform 0.5s 0.475s;
+
+  &:first-child {
+	  transform: translateX(-100%);
+    // visibility: hidden;
+    opacity: 0;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
 }
 
-/* Transparent Header Show Light Logo */
-.header-transparent .logo a:first-child{
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
-.header-transparent .logo a + a{
-	display: block !important;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
-
-/* Header Background Logo Swap to Dark Logo - On Scroll! */
-.header-background .logo a:first-child{
-	opacity: 0;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
-.header.header-background .logo a:last-child{
-	opacity: 1;
-}
-.header.header-background .logo a:first-child,
-.header.header-background .logo a:last-child{
-	-webkit-transform: translateX(-12rem);
-	-ms-transform: translateX(-12rem);
-	transform: translateX(-12rem);
-	visibility: visible;
+.header.header-background .logo a {
+  &:first-child {
+	  transform: translateX(0);
+    // visibility: visible;
+    opacity: 1;
+  }
+  &:last-child{
+	  transform: translateX(-100%);
+    opacity: 0;
+    // transition: opacity 0.75s 0.5s, transform 0.5s 0.75s;
+  }
 }
 
-/* Logo Nav Dark */
-.nav-dark .logo a:first-child{
-	display: block !important;
-	top: 0;
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
-.nav-dark .logo a:last-child{
-	display: none !important;
-}
+// /* Initial Logo Width */
+// .header .logo{
+// 	width: auto;
+// }
+// .header .logo a:first-child{
+// 	width: 12rem;
+// }
+// .header .logo a:last-child{
+// 	opacity: 0;
+// 	width: 4.4rem;
+// 	visibility: hidden;
+// }
+
+
+// /* Initial Logo Styling */
+// .header .logo a{
+// 	padding: 0 1.4rem;
+// 	line-height: 4.4rem;
+// 	display: block !important;
+//   position: absolute;
+//   top: 0;
+// }
+// .header-in .logo a,
+// .header-out .logo a{
+// 	-webkit-transition-duration: 0ms;
+// 	transition-duration: 0ms;
+// }
+// .header .logo a:first-child{
+// 	opacity: 1;
+// 	-webkit-transform: translateY(0);
+// 	transform: translateY(0);
+// }
+
+// /* Transparent Header Show Light Logo */
+// .header-transparent .logo a:first-child{
+// 	opacity: 1;
+// 	-webkit-transform: translateY(0);
+// 	transform: translateY(0);
+// }
+// .header-transparent .logo a + a{
+// 	display: block !important;
+// 	-webkit-transform: translateY(0);
+// 	transform: translateY(0);
+// }
+
+// /* Header Background Logo Swap to Dark Logo - On Scroll! */
+// .header.header-background .logo a:first-child,
+// .header.header-background .logo a:last-child{
+// 	transform: translateX(-12rem);
+// 	visibility: visible;
+// }
+// .header.header-background .logo a:first-child{
+// 	opacity: 0;
+// 	transform: translateY(0);
+// }
+// .header.header-background .logo a:last-child{
+// 	opacity: 1;
+// }
+
+// /* Logo Nav Dark */
+// .nav-dark .logo a:first-child{
+// 	display: block !important;
+// 	top: 0;
+// 	opacity: 1;
+// 	-webkit-transform: translateY(0);
+// 	transform: translateY(0);
+// }
+// .nav-dark .logo a:last-child{
+// 	display: none !important;
+// }
 
 /* Logo Mobile Header & Breakpoints */
 .mobile .header .logo a:first-child{

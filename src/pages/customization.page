@@ -1,2 +1,104 @@
-<section class="section-block">
+<section class="section-block intro-title-1 bkg-wild-sand color-charcoal">
+    <div class="row">
+        <div class="column width-12">
+						<div class="title-container">
+								<div class="title-container-inner center">
+									  <h1 class="title-xlarge horizon" data-animate-in="preset:slideInRightShort;duration:1500ms;">
+                        Customisation
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="customization-hero" class="section-block hero-5 window-height bkg-silver-pink color-wild-sand">
+    <div class="media-column width-4"></div>
+    <div class="row">
+        <div class="column width-8 push-4">
+            <div class="hero-content split-hero-content">
+                <div class="hero-content-inner">
+                    <div class="horizon"
+                         data-animate-in="preset:slideInUpShort;duration:1000ms;"
+                         data-threshold="0.5"
+                    >
+                        <h6 class="uppercase">Combine technology and traditional craftsmanship</h6>
+                        <h1>Redefining shoe shoping today!</h1>
+                    </div>
+                    <div class="horizon padding-v-small"
+                         data-animate-in="preset:fadeIn;duration:2000ms;"
+                         data-threshold="0.75"
+                    >
+                        <p class="lead">Our state of the art foot scanner guarantees perfect measurements
+                            for each foot and is fun and fast to use, creating an individual code for you
+                            to use anytime and from anywhere ensuring every pair of shoes you order is right for you.</p>
+                        <p>Our standard cut is just a little wide and so you can also order
+                            without scanning your feet but you can still customise all the styles in the
+                            collection, selecting your preferred style,  material, colour, heel and embellishments.</p>
+                        <p><a href="/contact-us" class="button">Reach us to learn more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-block bkg-charcoal color-white no-padding">
+    <div class="row medium">
+        <div class="column width-8 push-2 center horizon"
+             data-animate-in="preset:slideInUpLong;duration:2000ms;"
+             data-threshold="0.75"
+        >
+            <h1 class="lead text-xlarge no-margins">Craftsmanship is in our DNA</h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="section-block bkg-white color-charcoal">
+    <div class="row">
+        <div class="column width-4">
+            <div class="row horizon padding-h-small"
+                data-animate-in="preset:slideInUpLong;duration:1000ms;"
+                data-threshold="0.5"
+            >
+                <h2>Made to Measure</h2>
+                <p class="lead">We take an individualistic approach to making gorgeous shoes,
+                    but when it comes to made to measure we use technology.</p>
+                <p>Shoes we make for your feet precisely, we keep your ‘lasts’
+                    and your digital feet so you can order made to measure shoes again and again.</p>
+            </div>
+        </div>
+        <div class="column width-8">
+
+						<div class="row flex">
+								<div class="column mb-30 width-6">
+									  <div class="horizon" data-animate-in="preset:slideInUpShort;duration:1000ms;" data-threshold="1">
+										    <h4 class="mb-10">Digitise your feet</h4>
+										    <p>Step onto our state of the art foot scanner and digitise your feet</p>
+									  </div>
+								</div>
+								<div class="column mb-30 width-6">
+									  <div class="horizon" data-animate-in="preset:slideInUpShort;duration:1000ms;delay:200ms;" data-threshold="1">
+										    <h4 class="mb-10">Browse our collection</h4>
+										    <p>Browse our collection, once you find the style you like, choose your material, colour, trimmings and heels.</p>
+									  </div>
+								</div>
+								<div class="column mb-30 width-6">
+									  <div class="horizon" data-animate-in="preset:slideInUpShort;duration:1000ms;delay:400ms;" data-threshold="1">
+										    <h4 class="mb-10">Contact us for custom design</h4>
+										    <p>Blah blah</p>
+									  </div>
+								</div>
+								<div class="column mb-30 width-6">
+									  <div class="horizon" data-animate-in="preset:slideInUpShort;duration:1000ms;delay:600ms;" data-threshold="1">
+										    <h4 class="mb-10">Wait for your new shoes</h4>
+										    <p>Blah blah</p>
+									  </div>
+								</div>
+						</div>
+
+        </div>
+    </div>
 </section>

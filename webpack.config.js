@@ -69,6 +69,7 @@ module.exports = {
               { from: 'vendor/styles/*', to: path.resolve(build, 'styles'), flatten: true},
               { from: 'vendor/assets/*', to: path.resolve(build, 'assets'), flatten: true},
               { from: 'vendor/scripts/*', to: path.resolve(build, 'scripts'), flatten: true},
+              { from: 'vendor/fonts/*', to: path.resolve(build, 'assets/fonts'), flatten: true},
               { from: 'regions/**', flatten: true }],
             { context: src, copyUnmodified: true }
         )

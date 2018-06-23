@@ -21,7 +21,7 @@
 												        <h3 class="tms-caption font-alt-1 color-charocal lspacing-xlarge"
 													          data-animate-in="preset:slideInUpShort;duration:1000ms;delay:200ms;"
 												        >
-													          From Italy to London
+													          From Rome to London
 												        </h3>
 											      </div>
 										    </div>
@@ -55,18 +55,20 @@
 		</div>
 </section>
 
-<section id="landing-products" class="section-block hero-3 bottom">
-    <div class="row">
-		    <div class="column width-5">
-		        <div class="hero-content">
-				        <div class="hero-content-inner color-light-charcoal">
-				            <!-- <h2>Take a look at our featured items</h2> -->
-                    <p class="lead">Our artisans share our passion for the perfection we demand</p>
-                    <h1>Our featured products</h1>
-				        </div>
-			      </div>
-		    </div>
-	  </div>
+<section id="landing-products" class="section-block hero-2 no-padding">
+    <div class="overlay horizon" data-animate-in="preset:fadeIn;duration:2000ms;delay:1000ms;" data-threshold="1">
+        <div class="row large">
+		        <div class="column width-12">
+		            <div class="hero-content">
+				            <div class="hero-content-inner center">
+				                <!-- <h2>Take a look at our featured items</h2> -->
+                        <h2 class="text-xlarge lead">Our artisans share our passion for the perfection we demand</h2>
+                        <!-- <h2>Our featured products</h2> -->
+				            </div>
+			          </div>
+		        </div>
+	      </div>
+    </div>
 </section>
 
 <section id="landing-products-list" class="section-block bkg-white">
@@ -77,7 +79,9 @@
                     {@|apply product-related.block}
                 </squarespace:query>
                 <div class="grid-item">
-						        <a href="/collections" class="button large fade-location">View More</a>
+                    <p class="lead">Didn't catch your eye?</p>
+                    <p class="text-medium">We have much more to show</p>
+						        <a href="/collections" class="button large fade-location">Browse collection</a>
                 </div>
             </div>
         </div>
