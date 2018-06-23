@@ -1,0 +1,7 @@
+{.section collection}
+{.repeated section collections}
+<section id="{urlId}" class="section-block">
+    {mainContent}
+</section>
+{.end}
+{.end}
