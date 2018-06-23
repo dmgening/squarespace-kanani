@@ -1,3 +1,12 @@
+{.section website}
+  {.section logoImageUrl}
+    <img class="brand" src="{logoImageUrl}?format=original" alt="{siteTitle}" />
+  {.or}
+    <h1 class="brand" data-content-field="site-title">
+      {siteTitle}
+    </h1>
+  {.end}
+{.end}
 <nav class="site" data-content-field="navigation-primary-nav">
     {.repeated section items}
     <div class="item">

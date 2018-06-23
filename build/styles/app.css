@@ -131,9 +131,6 @@ section.landing-about {
   --dark-pink: #ea526f;
   --mellow-apricot: #f6b276;
 }
-:root {
-  --content-width: 80rem;
-}
 html,
 body {
   min-height: 100vh;
@@ -153,6 +150,7 @@ body {
   background: var(--silver-pink);
 }
 main {
-  background: var(--white);
   padding: 1rem 0 6rem;
 }
+
+/*# sourceMappingURL=app.css.map*/

@@ -11,7 +11,9 @@
         "server": "squarespace runserver",
         "server:auth": "squarespace runserver --auth",
         "start": "npm run server & webpack --watch",
-        "start:auth": "npm run server:auth & webpack --watch"
+        "start:auth": "npm run server:auth & webpack --watch",
+        "deploy": "squarespace deploy",
+        "deploy:production": "npm run build:production && squarespace deploy"
     },
     "repository": {
         "type": "git",
